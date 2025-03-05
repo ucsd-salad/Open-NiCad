@@ -95,7 +95,7 @@ fi
 date
 
 echo "${lib}/tools/streamprocess.x '${lib}/txl/${language}-rename-${renaming}-${granularity}.x stdin' < ${pcfile}.xml > ${pcfile}-${renaming}.xml"
-time ${lib}/tools/streamprocess.x "${lib}/txl/${language}-rename-${renaming}-${granularity}.x stdin" < "${pcfile}.xml" > "${pcfile}-${renaming}.xml"
+time ${lib}/tools/streamprocess.x "(${lib}/txl/${language}-rename-${renaming}-${granularity}.x stdin || cat)" < "${pcfile}.xml" > "${pcfile}-${renaming}.xml"
 
 result=$?
 
